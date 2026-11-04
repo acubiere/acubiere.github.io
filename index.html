@@ -1,344 +1,309 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Acubiere Aerospace — exploring aerospace engineering, launch vehicle systems and future space technologies.">
+<title>ACUBIERE AEROSPACE</title>
 
-  <title>ACUBIERE AEROSPACE | Engineering What's Next</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+html {
+  scroll-behavior: smooth;
+}
 
-  <link rel="stylesheet" href="style.css">
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #070b12;
+  color: white;
+}
+
+/* HEADER */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff25;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 6px;
+  color: #a8c8df;
+  margin-top: 3px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+nav a {
+  color: #e0e7ee;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+nav a:hover {
+  color: #9ed6ff;
+}
+
+.contact-btn {
+  border: 1px solid #ffffff80;
+  padding: 13px 20px;
+}
+
+/* LANDING PAGE */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 130px 9% 100px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,8,15,.95) 0%,
+      rgba(3,8,15,.75) 42%,
+      rgba(3,8,15,.12) 100%
+    ),
+    url("rocket-launch.png") center / cover no-repeat;
+
+  background-color: #070b12;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: #a8d8ff;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(55px, 7.5vw, 105px);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -5px;
+  margin-bottom: 30px;
+}
+
+h1 span {
+  color: #9ed6ff;
+}
+
+.description {
+  max-width: 460px;
+  color: #c0cbd5;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 24px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: .3s;
+}
+
+.primary {
+  background: white;
+  color: #07111b;
+}
+
+.primary:hover {
+  background: #9ed6ff;
+  transform: translateY(-3px);
+}
+
+.secondary {
+  border: 1px solid #ffffff80;
+  color: white;
+}
+
+.secondary:hover {
+  background: #ffffff;
+  color: #07111b;
+}
+
+/* BOTTOM INFORMATION */
+
+.bottom-info {
+  position: absolute;
+  bottom: 30px;
+  left: 9%;
+  right: 9%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #c3d0dc;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+
+  header {
+    height: 75px;
+    padding: 0 6%;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: 100vh;
+    padding: 130px 7% 110px;
+    background-position: center, 60% center;
+  }
+
+  h1 {
+    font-size: clamp(48px, 11vw, 75px);
+    letter-spacing: -3px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottom-info {
+    left: 7%;
+    right: 7%;
+    font-size: 7px;
+    flex-wrap: wrap;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="progress" id="progress"></div>
-
 <header>
-  <a class="brand" href="#top">
-    <b>A<span>·</span></b>
-    <strong>
-      ACUBIERE
-      <small>A E R O S P A C E</small>
-    </strong>
-  </a>
 
-  <button id="menu" aria-label="Open menu">☰</button>
+  <div class="logo">
+    ACUBIERE
+    <span>A E R O S P A C E</span>
+  </div>
 
-  <nav id="nav">
-    <a href="#about">ABOUT</a>
-    <a href="#focus">CAPABILITIES</a>
-    <a href="#research">RESEARCH</a>
-    <a href="#contact">CONTACT</a>
-    <a class="navcta" href="#contact">GET IN TOUCH ↗</a>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#home">ABOUT</a>
+    <a href="#home">TECHNOLOGY</a>
+    <a href="#home">CONTACT</a>
+    <a href="mailto:acubiere@gmail.com" class="contact-btn">
+      GET IN TOUCH ↗
+    </a>
   </nav>
+
 </header>
+
 
 <main>
 
-  <!-- HERO SECTION -->
+<section class="hero" id="home">
 
-  <section class="hero" id="top">
+  <div class="hero-content">
 
-    <div class="grid"></div>
+    <p class="eyebrow">
+      INDEPENDENT AEROSPACE COMPANY
+    </p>
 
-    <div class="copy reveal">
+    <h1>
+      ENGINEERING<br>
+      <span>WHAT'S NEXT.</span>
+    </h1>
 
-      <p class="eyebrow">
-        ● &nbsp; INDEPENDENT AEROSPACE COMPANY
-      </p>
+    <p class="description">
+      Acubiere Aerospace is an emerging Indian aerospace
+      company exploring the future of launch vehicle systems,
+      space technologies and advanced engineering.
+    </p>
 
-      <h1>
-        ENGINEERING<br>
-        <em>WHAT'S NEXT.</em>
-      </h1>
+    <div class="buttons">
 
-      <p class="lead">
-        Building toward a future shaped by bold ideas,
-        rigorous engineering and the pursuit of space technology.
-      </p>
+      <a href="#home" class="button primary">
+        OUR VISION →
+      </a>
 
-      <div class="actions">
-        <a class="btn" href="#about">
-          DISCOVER ACUBIERE ↓
-        </a>
-
-        <a class="link" href="#focus">
-          EXPLORE OUR FOCUS ↗
-        </a>
-      </div>
-
-    </div>
-
-    <div class="space-art">
-      <div class="planet"></div>
-      <div class="orbit"></div>
-      <div class="rocket">
-        <i></i>
-        <b></b>
-        <span></span>
-      </div>
-      <small>01 / THE NEXT FRONTIER</small>
-    </div>
-
-    <div class="hero-foot">
-      <span>HYDERABAD, INDIA</span>
-      <span>DESIGNED FOR THE LONG HORIZON</span>
-      <a href="#about">SCROLL TO EXPLORE ↓</a>
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT SECTION -->
-
-  <section class="intro section" id="about">
-
-    <div class="kicker">
-      01 / WHO WE ARE
-    </div>
-
-    <div>
-
-      <h2>
-        THE FUTURE ISN'T<br>
-        BUILT BY <em>STANDING STILL.</em>
-      </h2>
-
-      <div class="two">
-
-        <p>
-          Acubiere Aerospace Private Limited is an emerging
-          aerospace company based in India. We are focused
-          on exploring engineering-led approaches to launch
-          vehicle systems and future space technologies.
-        </p>
-
-        <p>
-          Our journey is at an early stage. We are building
-          the foundations — knowledge, capability and
-          partnerships — for ambitious work ahead.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CAPABILITIES SECTION -->
-
-  <section class="section focus" id="focus">
-
-    <div class="kicker">
-      02 / AREAS OF FOCUS
-    </div>
-
-    <div class="heading">
-
-      <h2>
-        OUR ENGINEERING<br>
-        <em>HORIZON.</em>
-      </h2>
-
-      <p>
-        Focused areas that shape our long-term direction.
-      </p>
-
-    </div>
-
-    <div class="cards">
-
-      <article class="card reveal">
-
-        <small>01 / SYSTEMS ENGINEERING</small>
-
-        <div class="visual v1">
-          <div class="mini-rocket"></div>
-          <i></i>
-        </div>
-
-        <h3>
-          Launch Vehicle<br>Systems
-        </h3>
-
-        <p>
-          Exploring the engineering disciplines behind
-          launch vehicle architecture, integration and
-          system-level design.
-        </p>
-
-        <a href="#contact">↗</a>
-
-      </article>
-
-
-      <article class="card reveal">
-
-        <small>02 / SPACE TECHNOLOGY</small>
-
-        <div class="visual v2">
-          <div class="sphere"></div>
-          <i></i>
-        </div>
-
-        <h3>
-          Space<br>Technologies
-        </h3>
-
-        <p>
-          Studying emerging technologies and concepts
-          that may enable new capabilities for the
-          space sector.
-        </p>
-
-        <a href="#contact">↗</a>
-
-      </article>
-
-
-      <article class="card reveal">
-
-        <small>03 / ADVANCED ENGINEERING</small>
-
-        <div class="visual v3">
-          <div class="core"></div>
-          <i></i>
-          <b></b>
-        </div>
-
-        <h3>
-          Aerospace<br>Engineering
-        </h3>
-
-        <p>
-          Building a foundation in structures, propulsion,
-          materials, simulation and multidisciplinary
-          engineering.
-        </p>
-
-        <a href="#contact">↗</a>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- RESEARCH SECTION -->
-
-  <section class="statement" id="research">
-
-    <div class="statement-inner reveal">
-
-      <p class="eyebrow">
-        ● &nbsp; 03 / OUR APPROACH
-      </p>
-
-      <h2>
-        START WITH<br>
-        <em>THE FUNDAMENTALS.</em>
-      </h2>
-
-      <p>
-        Meaningful aerospace progress takes patience,
-        precision and a commitment to learning.
-        We believe strong engineering foundations
-        come before ambitious outcomes.
-      </p>
-
-      <a class="outline" href="#contact">
-        CONNECT WITH US ↗
+      <a href="mailto:acubiere@gmail.com" class="button secondary">
+        CONTACT US ↗
       </a>
 
     </div>
 
-    <small>
-      17.3850° N&nbsp; 78.4867° E<br>
-      HYDERABAD / INDIA
-    </small>
-
-  </section>
+  </div>
 
 
-  <!-- CONTACT SECTION -->
+  <div class="bottom-info">
 
-  <section class="contact section" id="contact">
+    <span>HYDERABAD, INDIA</span>
 
-    <div class="kicker">
-      04 / START A CONVERSATION
-    </div>
+    <span>ACUBIERE AEROSPACE PRIVATE LIMITED</span>
 
-    <div class="contact-grid">
+    <span>ENGINEERING THE FUTURE</span>
 
-      <div>
+  </div>
 
-        <h2>
-          LET'S LOOK<br>
-          <em>FORWARD.</em>
-        </h2>
-
-        <p>
-          For partnerships, engineering conversations
-          and general enquiries, reach out to our team.
-        </p>
-
-      </div>
-
-      <div class="contact-card">
-
-        <small>GENERAL ENQUIRIES</small>
-
-       
-
-        <hr>
-
-        <small>LOCATION</small>
-
-        <p>
-          Hyderabad, Telangana<br>
-          India
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
+</section>
 
 </main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <a class="brand" href="#top">
-    <b>A<span>·</span></b>
-    <strong>
-      ACUBIERE
-      <small>A E R O S P A C E</small>
-    </strong>
-  </a>
-
-  <span>
-    © <i id="year"></i>
-    ACUBIERE AEROSPACE PRIVATE LIMITED
-  </span>
-
-  <a href="#top">BACK TO TOP ↑</a>
-
-</footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
