@@ -1,1 +1,7 @@
-
+background:
+  linear-gradient(
+    90deg,
+    rgba(3,8,15,.94),
+    rgba(3,8,15,.12)
+  ),
+  url("rocket-launch.png") center / cover no-repeat;
